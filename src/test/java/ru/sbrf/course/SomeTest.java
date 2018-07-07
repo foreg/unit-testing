@@ -1,10 +1,6 @@
 package ru.sbrf.course;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Rule;
+import org.junit.*;
 import org.junit.rules.TemporaryFolder;
 
 import java.io.File;
@@ -34,6 +30,11 @@ public class SomeTest {
     @After
     public void tearDown() {
         output.delete();
+    }
+
+    @Test
+    public void test() {
+        System.out.println(output.getAbsoluteFile());
     }
 
 }
